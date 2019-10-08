@@ -33,7 +33,7 @@ public class Cliente implements java.io.Serializable {
 	}
 
 	@Id
-	//@GeneratedValue(strategy = IDENTITY)
+//	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "idcliente", unique = true, nullable = false)
 	public int getIdcliente() {
 		return this.idcliente;

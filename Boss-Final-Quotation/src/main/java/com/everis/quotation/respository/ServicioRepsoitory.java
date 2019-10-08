@@ -1,16 +1,13 @@
 package com.everis.quotation.respository;
 
-import java.util.List;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.everis.quotation.model.Cliente;
+import com.everis.quotation.model.Servicio;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Integer>{
-	public Cliente findByidcliente(Integer idcliente);
-	
-	
+public interface ServicioRepsoitory extends JpaRepository<Servicio, Integer>{
+	public Servicio findByidservicio(Integer idservicio);
 
 }
