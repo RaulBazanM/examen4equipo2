@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,7 +24,7 @@ public class ComputeController {
 	@Autowired
 	Cotizacion cotizacion;
 	
-	@GetMapping("/compute")
+	@PostMapping("/compute")
 	public ComputeResponse compute(@RequestBody QuotationResponse quotation) {
 		ComputeResponse computeResponse = new ComputeResponse();
 		Cliente clienteSolicitado = quotation.getCliente();
@@ -62,5 +63,6 @@ public class ComputeController {
 		
 		return computeResponse;
 	}
+	
 
 }
